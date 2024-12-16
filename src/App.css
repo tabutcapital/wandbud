@@ -1,38 +1,710 @@
-.App {
+/* General Styles */
+body {
+  background-image: url(../public/pexels-florian-kriechbaumer-1479976889-26926244.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; /* Or use 'contain' based on your need */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #0d0d0d;
+}
+
+
+a {
+  text-decoration:solid;
+  color: #007bff;
+}
+
+a:hover {
+  color: #0fe0ef;
+}
+
+nav {
+  background: linear-gradient(90deg,#24243e, #0984d6, #24243e);
+  padding: 1rem;
+  border-bottom: 2px solid #c9b5f1;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding:2px;
+}
+
+nav ul li {
+  margin: 5px;
+}
+
+nav ul li a {
+  color: #e0e0e0;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #05aba5;
+  background: rgba(2, 62, 130, 0.901);
+  border: 2px solid #00fff5;
+  box-shadow: 0 0 10px #00f2ff, 0 0 10px #00fff5;
+  transform: scale(1.1);
+}
+
+
+.home-container {
+  padding: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(140deg, rgba(152, 156, 247, 0.3), rgba(6, 8, 60, 0.9));
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  border: 2px solid #04eeff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins',sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100vh; /* Full height of the viewport */
+  width: 100%; 
+}
+
+.home-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 255, 255, 0.5), 0 5px 20px rgba(0, 255, 255, 0.3);
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  color: #00fff5;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 15px #021137, 0 0 30px #051c70;
+}
+
+.home-container p {
+  font-size: 1.3rem;
+  color: #e0e0e0;
+  margin-bottom: 2.5rem;
+  line-height: 2.8;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
+}
+
+/* Home Features Section */
+.home-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.home-feature-item {
+  border: 2.5px solid #00fff5;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #00fff5;
+  background: linear-gradient(135deg, rgba(30, 30, 50, 0.7), rgba(60, 60, 100, 0.7));
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+}
+
+.home-feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 40px #00fff5, 0 0 15px #03f7ee;
+  background: linear-gradient(135deg, rgba(50, 50, 80, 0.9), rgba(80, 80, 140, 1));
+}
+
+
+.destinations-container {
+  padding: 0.01rem;
+  width: 100%;
+  background-image: url(../public/pexels-florian-kriechbaumer-1479976889-26926244.jpg);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  text-align:center;
+  border-radius: 0;
+  
+}
+
+
+.destinations-container h1 {
+  background: linear-gradient(90deg,#24243e, #0984d6, #24243e);
+  width: 100%;
+  height: auto;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+  font-style: oblique;
+  font-family: fantasy;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color:#fdfefe;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  
+}
+
+.loading-message,
+.error-message {
+  font-size: 1.3rem;
+  color: #131313;
+  margin-top: 2rem;
+}
+
+
+
+.destination-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgb(5, 254, 250);
+}
+
+.destination-item h3 {
+  background: linear-gradient(90deg,#24243e, #0984d6, #24243e);
+  border-radius: 50px;
+  font-style: italic;
+  font-size: 1.8rem;
+  color: #f5f7fc;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.destination-item p {
+  font-size: 1.3rem;
+  color: #f9f9fb;
+  text-align: center;
+}
+.destinations-list {
+
+  padding: 0;
+  margin: 0;
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  gap: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-container input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.input-container button {
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input-container button:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  text-align: center;
+  margin: 0.5rem 0;
+  color: green;
+  font-weight: bold;
+}
+
+.itinerary-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.itinerary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.itinerary-item button {
+  padding: 0.5rem 1rem;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.itinerary-item button:hover {
+  background-color: #cc0000;
+}
+
+
+/* Container for the entire profile page */
+.user-profile {
+  background-image:url(../public/pexels-christine-renard-198055-615060.jpg);
+  border-radius: 8px;
+  background-size: cover;
+  padding: 20px;
+  max-width: 500px;
+  margin: 30px auto;
+  box-shadow: 0 8px 16px rgb(5, 213, 100);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Title for the user profile */
+.user-profile h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0b187b;
+
+
+  margin-bottom: 20px;
+}
+
+/* Form container to give a clean structure */
+form {
+  display:flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 8px 16px rgb(5, 254, 250);
+background-image:url(../public/pexels-florian-kriechbaumer-1479976889-26926244.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+
+
+}
+
+
+.form-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+
+input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color:#00d2ff;
+  color:#f8f8f8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+/* Hover effect for the submit button */
+button:hover {
+  background-color: #0cdbf2;
+}
+
+
+/* Search and Booking Styles - Futuristic Look */
+.search-and-booking {
+  background: linear-gradient(135deg, rgba(30, 30, 50, 0.7), rgba(60, 60, 100, 0.7));
+
+  text-align: center;
+  padding: 2.5rem;
+  max-width: 1200px; /* Increased width to fit more columns */
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif;
+  color: #00fff5;
+}
+
+.search-and-booking h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #00fff5;
+  text-shadow: 0 0 15px #020808, 0 0 30px #000dff;
+}
+
+.search-and-booking .search-bar {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.search-and-booking input {
+  width: 70%;
+  padding: 0.8rem;
+  border: 2px solid #00fff5;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-and-booking input:focus {
+  outline: none;
+  box-shadow: 0 0 15px #00fff5;
+}
+
+.search-and-booking button {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #007bff, #0056b3);
   color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.search-and-booking button:disabled {
+  background-color: rgba(160, 160, 160, 0.5);
+  cursor: not-allowed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-and-booking button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #00d2ff, #0056b3);
+  box-shadow: 0 0 20px #00fff5;
+  transform: scale(1.05);
 }
+
+.search-and-booking .error-message {
+  color: #ff4d4d;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.search-and-booking .results-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 1.5rem; /* Space between items */
+}
+
+.search-and-booking .result-item {
+  display: flex;
+  flex-direction: column; /* Align content vertically */
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(145deg, rgba(50, 50, 80, 0.9), rgba(30, 30, 60, 0.8));
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-and-booking .result-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 255, 245, 0.6);
+}
+
+.search-and-booking .result-name {
+  font-size: 1.4rem;
+  color: #00fff5;
+  text-shadow: 0 0 8px #00fff5;
+  margin-bottom: 1rem;
+}
+
+.search-and-booking .book-button {
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-and-booking .book-button:hover {
+  background: linear-gradient(135deg, #00ffa3, #218838);
+  box-shadow: 0 0 20px #00ffa3;
+  transform: translateY(-2px);
+}
+
+.search-and-booking .no-results {
+  font-size: 1.2rem;
+  color: #bbbbbb;
+}
+
+
+
+
+
+button:hover {
+  background-color: #c0851f;
+}
+
+.about-container {
+  padding: 20px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.about-container h2 {
+  color: #333;
+  margin-top: 1.5rem;
+}
+
+.about-container p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.top-link {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.top-link a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.top-link a:hover {
+  color: #0056b3;
+}
+
+.features-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  background-color: #fff;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  border-left: 4px solid #007bff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  color: #333;
+}
+
+.features-list li strong {
+  color: #007bff;
+  font-weight: bold;
+}
+
+
+
+
+/* Booking Management Styles */
+.booking-management {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-management h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.booking-management .search-bar {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.booking-management ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.booking-management .booking-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.booking-management .booking-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.booking-management .booking-name {
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.booking-management .booking-date {
+  font-size: 1rem;
+  color: #666;
+  margin-left: 1rem;
+}
+
+.booking-management .cancel-button {
+  padding: 0.5rem 1rem;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-management .cancel-button:hover {
+  background-color: #ff1f1f;
+}
+
+.booking-management .no-bookings {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
+.reviews-container {
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-container h1 {
+  text-align: center;
+  color: #007bff;
+}
+
+.review-textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.rating-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.rating-input label {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.rating-input select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.reviews-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.review-item {
+  background-color: #f9f9f9;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-item p {
+  margin: 0;
+}
+
+.review-date {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+.partner-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
