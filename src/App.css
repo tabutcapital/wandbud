@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-  background-image: url(../public/pexels-florian-kriechbaumer-1479976889-26926244.jpg);
+  background-color: grey;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; /* Or use 'contain' based on your need */
@@ -60,23 +60,6 @@ nav ul li a:hover {
 }
 
 
-.home-container {
-  padding: 2.5rem;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-  background: linear-gradient(140deg, rgba(152, 156, 247, 0.3), rgba(6, 8, 60, 0.9));
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat;
-  border: 2px solid #04eeff;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3);
-  font-family: 'Poppins',sans-serif;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100vh; /* Full height of the viewport */
-  width: 100%; 
-}
 
 .home-container:hover {
   transform: scale(1.02);
@@ -281,7 +264,7 @@ nav ul li a:hover {
 .user-profile h1 {
   text-align: center;
   font-size: 2rem;
-  color: #0b187b;
+  color:white;
 
 
   margin-bottom: 20px;
